@@ -17,6 +17,18 @@ GIT
       spree_bootstrap
 
 GIT
+  remote: git://github.com/spree-contrib/spree_i18n.git
+  revision: 3bd3ca824c4dcf0484795befeb726589e45353d5
+  branch: 2-4-stable
+  specs:
+    spree_i18n (3.0.0)
+      friendly_id-globalize
+      globalize (~> 4.0.3)
+      i18n_data (~> 0.5.1)
+      rails-i18n (~> 4.0.1)
+      spree_core (~> 2.4.0)
+
+GIT
   remote: git://github.com/spree/spree_auth_devise.git
   revision: 997382fcb1f6ed78a201ee7016384cfe71745aea
   branch: 2-4-stable
@@ -130,6 +142,14 @@ GEM
       railties (>= 3.2, < 5.0)
     friendly_id (5.0.5)
       activerecord (>= 4.0.0)
+    friendly_id-globalize (1.0.0.alpha1)
+      friendly_id (>= 5.0.0.beta4, < 6.0)
+    globalize (4.0.3)
+      activemodel (>= 4.0.0, < 5)
+      activerecord (>= 4.0.0, < 5)
+    globalize-versioning (0.1.0.alpha.1)
+      globalize (>= 3, < 5)
+      paper_trail (~> 3.0.0)
     highline (1.6.21)
     hike (1.2.3)
     htmlentities (4.3.1)
@@ -137,6 +157,7 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
+    i18n_data (0.5.1)
     jbuilder (2.2.7)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -172,6 +193,9 @@ GEM
       money (< 7.0.0)
       nokogiri (~> 1.4)
     orm_adapter (0.5.0)
+    paper_trail (3.0.6)
+      activerecord (>= 3.0, < 5.0)
+      activesupport (>= 3.0, < 5.0)
     paperclip (4.2.1)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -203,6 +227,9 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.1.8)
       sprockets-rails (~> 2.0)
+    rails-i18n (4.0.3)
+      i18n (~> 0.6)
+      railties (~> 4.0)
     railties (4.1.8)
       actionpack (= 4.1.8)
       activesupport (= 4.1.8)
@@ -325,6 +352,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  globalize-versioning
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.1.8)
@@ -334,6 +362,7 @@ DEPENDENCIES
   spree_auth_devise!
   spree_bootstrap_frontend!
   spree_gateway!
+  spree_i18n!
   spring
   sqlite3
   therubyracer
